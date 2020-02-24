@@ -1,0 +1,1077 @@
+[2019/12/08 22:02:27][CONFIG][initService]  Starting service...
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Scheme: http://
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Port: 5334
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Path: /api/movies
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Database port: 3309
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Database username: cs122bg7
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Database password provided? true
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Database name: cs122bg7
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  IDM Scheme: http://
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  IDM Hostname: 0.0.0.0
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  IDM Port: 5333
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  IDM Path: /api/idm
+[2019/12/08 22:02:27][CONFIG][currentConfigs]  IDM Privilege Path: /privilege
+[2019/12/08 22:02:27][CONFIG][connectToDatabase]  Connecting to database...
+[2019/12/08 22:02:27][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3309/cs122bg7?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 22:02:29][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3309/cs122bg7?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 22:02:29][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/12/08 22:02:29][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/12/08 22:02:29][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:5334/api/movies
+[2019/12/08 22:02:29][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/12/08 22:02:29][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/12/08 22:02:29][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/12/08 22:02:30][CONFIG][initHTTPServer]  HTTP server started.
+[2019/12/08 22:02:30][CONFIG][initService]  Service initialized.
+[2019/12/08 22:02:41][INFO][movieSearch]  Received title from query param: Dark
+		Received year from query param: null
+		Received director from query param: Christopher Nolan
+		Received genre from query param: null
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: title
+		Received direction from query param: asc
+[2019/12/08 22:02:41][INFO][movieSearch]  Building client...
+[2019/12/08 22:02:41][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:02:41][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:02:41][INFO][movieSearch]  Sending request...
+[2019/12/08 22:02:42][INFO][movieSearch]  Request sent.
+[2019/12/08 22:02:42][INFO][movieSearch]  Received status 200
+[2019/12/08 22:02:42][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:02:42][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:02:42][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%Dark%' && name LIKE '%Christopher Nolan%' ORDER BY title asc LIMIT 10 OFFSET 0
+[2019/12/08 22:02:42][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:02:42][INFO][searchMovies]  FOUND   1   MOVIES
+[2019/12/08 22:02:42][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:03:23][INFO][movieSearch]  Received title from query param: 
+		Received year from query param: 2012
+		Received director from query param: 
+		Received genre from query param: Action
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: rating
+		Received direction from query param: DESC
+[2019/12/08 22:03:23][INFO][movieSearch]  Building client...
+[2019/12/08 22:03:23][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:03:23][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:03:23][INFO][movieSearch]  Sending request...
+[2019/12/08 22:03:23][INFO][movieSearch]  Request sent.
+[2019/12/08 22:03:23][INFO][movieSearch]  Received status 200
+[2019/12/08 22:03:23][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:03:23][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:03:23][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%%' && year = 2012 && name LIKE '%%' && ge.genre = 'Action' ORDER BY title DESC LIMIT 10 OFFSET 0
+[2019/12/08 22:03:23][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:03:23][INFO][searchMovies]  FOUND   10   MOVIES
+[2019/12/08 22:03:23][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:03:55][INFO][movieSearch]  Building client...
+[2019/12/08 22:03:55][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:03:55][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:03:55][INFO][movieSearch]  Sending request...
+[2019/12/08 22:03:55][INFO][movieSearch]  Request sent.
+[2019/12/08 22:03:55][INFO][movieSearch]  Received status 200
+[2019/12/08 22:03:55][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:03:55][INFO][movieSearch]  Received request to search movie with movie_id: tt1345836
+[2019/12/08 22:03:55][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:03:55][INFO][getMovie]  Query succeeded searching for tt1345836
+[2019/12/08 22:03:55][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:03:55][INFO][getMovie]  title: The Dark Knight Rises
+[2019/12/08 22:03:55][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 525;
+[2019/12/08 22:03:55][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:03:55][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt1345836';
+[2019/12/08 22:03:55][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:03:55][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt1345836';
+[2019/12/08 22:03:56][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:03:56][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:04:07][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:04:07][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:04:07][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:04:07][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:04:07][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:05:11][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:05:11][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:05:11][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:05:11][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:05:11][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:07:26][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:07:26][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:07:26][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:07:26][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:07:26][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:10:09][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:10:09][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:10:09][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:10:09][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:10:09][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:10:17][INFO][movieBrowse]  Building client...
+[2019/12/08 22:10:17][INFO][movieBrowse]  Building WebTarget...
+[2019/12/08 22:10:17][INFO][movieBrowse]  Starting invocation builder...
+[2019/12/08 22:10:17][INFO][movieBrowse]  Sending request...
+[2019/12/08 22:10:17][INFO][movieBrowse]  Request sent.
+[2019/12/08 22:10:17][INFO][movieBrowse]  Received status 200
+[2019/12/08 22:10:17][INFO][movieBrowse]  Successfully mapped response.
+[2019/12/08 22:10:17][INFO][movieBrowse]  Received request to search movies keywords
+[2019/12/08 22:10:17][INFO][browseMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie m JOIN (SELECT kim.movie_id, GROUP_CONCAT(DISTINCT k.name ORDER BY kim.keyword_id) as keywords_in_movie
+FROM keyword_in_movie kim JOIN keyword k on kim.keyword_id = k.keyword_id
+   GROUP BY movie_id) as keywords on m.movie_id = keywords.movie_id WHERE 1=1 && keywords_in_movie LIKE '%sequel%'  && keywords_in_movie LIKE '%alien invasion%'  && keywords_in_movie LIKE '%based on comic%'  ORDER BY title asc LIMIT 10 OFFSET 0;
+[2019/12/08 22:10:18][INFO][browseMovies]  Query succeeded.
+[2019/12/08 22:10:18][INFO][browseMovies]  FOUND   1   MOVIES
+[2019/12/08 22:10:18][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:10:18][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:10:18][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:10:20][INFO][movieSearch]  Building client...
+[2019/12/08 22:10:20][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:10:20][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:10:20][INFO][movieSearch]  Sending request...
+[2019/12/08 22:10:20][INFO][movieSearch]  Request sent.
+[2019/12/08 22:10:20][INFO][movieSearch]  Received status 200
+[2019/12/08 22:10:20][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:10:20][INFO][movieSearch]  Received request to search movie with movie_id: tt4154796
+[2019/12/08 22:10:20][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:10:20][INFO][getMovie]  Query succeeded searching for tt4154796
+[2019/12/08 22:10:20][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:10:20][INFO][getMovie]  title: Avengers: Endgame
+[2019/12/08 22:10:20][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:10:20][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:10:20][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt4154796';
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Mark Ruffalo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting William Hurt
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Natalie Portman
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Michelle Pfeiffer
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Scarlett Johansson
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Linda Cardellini
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Don Cheadle
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Samuel L. Jackson
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Tilda Swinton
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Marisa Tomei
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Robert Downey Jr.
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Michael Douglas
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Robert Redford
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Stan Lee
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Zoe Saldana
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Hiroyuki Sanada
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Angela Bassett
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Gwyneth Paltrow
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Vin Diesel
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Rene Russo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jon Favreau
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Chris Evans
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Josh Brolin
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Ty Simpkins
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Tom Wisdom
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jeremy Renner
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Evangeline Lilly
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Joe Russo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting James D'Arcy
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting John Slattery
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Paul Rudd
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Tom Vaughan-Lawlor
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Benedict Wong
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Hayley Atwell
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting John Posey
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Bradley Cooper
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Sean Gunn
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Anthony Mackie
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Taika Waititi
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Brie Larson
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Sebastian Stan
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Kerry Condon
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Tessa Thompson
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Cobie Smulders
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Benedict Cumberbatch
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Chris Pratt
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Chris Hemsworth
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Frank Grillo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Danai Gurira
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Ken Jeong
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Tom Hiddleston
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Robert Pralgo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Monique Ganderton
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Yvette Nicole Brown
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Patrick Gorman
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Pom Klementieff
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Taylor Patterson
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Chadwick Boseman
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Callan Mulvey
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Terry Notary
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jimmy Ray Pickens
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Karen Gillan
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Dave Bautista
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Elizabeth Olsen
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Ross Marquand
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Aaron Lazar
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Russell Bobbitt
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Maximiliano Hernández
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Emma Fuhrmann
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Letitia Wright
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Sam Hargrave
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Tom Holland
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Brian Schaeffer
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Michael James Shaw
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting John Michael Morris
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Winston Duke
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Ameenah Kaplan
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Lee Moore
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Brent McGee
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Michael A. Cook
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jacob Batalon
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jim Starlin
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Ben Sakamoto
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Hye Jin Jang
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jack Champion
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Cade Woodward
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Anthony G Breed
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jackson A. Dunn
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Olaniyan Thurmon
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Mike Lutz
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Ava Russo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Lexi Rabe
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Lia Russo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Bazlo LeClair
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Loen LeClair
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jennifer Elmore
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting James Lin
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Erica Ribley
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Jamie Wedel
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Julian Russo
+[2019/12/08 22:10:21][INFO][getPeopleFromMovie]  Inserting Agostino Rosalina
+[2019/12/08 22:10:21][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt4154796';
+[2019/12/08 22:10:21][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:10:21][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:16:09][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:16:09][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:16:09][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:16:10][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:16:10][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:20:51][INFO][movieSearch]  Received title from query param: 
+		Received year from query param: 2012
+		Received director from query param: 
+		Received genre from query param: Action
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: rating
+		Received direction from query param: DESC
+[2019/12/08 22:20:52][INFO][movieSearch]  Building client...
+[2019/12/08 22:20:52][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:20:52][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:20:52][INFO][movieSearch]  Sending request...
+[2019/12/08 22:20:52][INFO][movieSearch]  Request sent.
+[2019/12/08 22:20:52][INFO][movieSearch]  Received status 200
+[2019/12/08 22:20:52][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:20:52][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:20:52][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%%' && year = 2012 && name LIKE '%%' && ge.genre = 'Action' ORDER BY title DESC LIMIT 10 OFFSET 0
+[2019/12/08 22:20:52][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:20:52][INFO][searchMovies]  FOUND   10   MOVIES
+[2019/12/08 22:20:52][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:21:22][INFO][movieSearch]  Received title from query param: Dark
+		Received year from query param: null
+		Received director from query param: Christopher Nolan
+		Received genre from query param: null
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: rating
+		Received direction from query param: DESC
+[2019/12/08 22:21:22][INFO][movieSearch]  Building client...
+[2019/12/08 22:21:22][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:21:22][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:21:22][INFO][movieSearch]  Sending request...
+[2019/12/08 22:21:22][INFO][movieSearch]  Request sent.
+[2019/12/08 22:21:22][INFO][movieSearch]  Received status 200
+[2019/12/08 22:21:22][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:21:22][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:21:22][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%Dark%' && name LIKE '%Christopher Nolan%' ORDER BY title DESC LIMIT 10 OFFSET 0
+[2019/12/08 22:21:22][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:21:22][INFO][searchMovies]  FOUND   1   MOVIES
+[2019/12/08 22:21:22][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:21:27][INFO][movieSearch]  Building client...
+[2019/12/08 22:21:27][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:21:27][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:21:27][INFO][movieSearch]  Sending request...
+[2019/12/08 22:21:27][INFO][movieSearch]  Request sent.
+[2019/12/08 22:21:27][INFO][movieSearch]  Received status 200
+[2019/12/08 22:21:27][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:21:27][INFO][movieSearch]  Received request to search movie with movie_id: tt1345836
+[2019/12/08 22:21:27][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:21:27][INFO][getMovie]  Query succeeded searching for tt1345836
+[2019/12/08 22:21:27][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:21:27][INFO][getMovie]  title: The Dark Knight Rises
+[2019/12/08 22:21:27][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 525;
+[2019/12/08 22:21:27][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:21:27][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt1345836';
+[2019/12/08 22:21:28][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:21:28][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt1345836';
+[2019/12/08 22:21:28][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:21:28][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:22:23][INFO][movieBrowse]  Building client...
+[2019/12/08 22:22:23][INFO][movieBrowse]  Building WebTarget...
+[2019/12/08 22:22:23][INFO][movieBrowse]  Starting invocation builder...
+[2019/12/08 22:22:23][INFO][movieBrowse]  Sending request...
+[2019/12/08 22:22:23][INFO][movieBrowse]  Request sent.
+[2019/12/08 22:22:23][INFO][movieBrowse]  Received status 200
+[2019/12/08 22:22:23][INFO][movieBrowse]  Successfully mapped response.
+[2019/12/08 22:22:23][INFO][movieBrowse]  Received request to search movies keywords
+[2019/12/08 22:22:23][INFO][browseMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie m JOIN (SELECT kim.movie_id, GROUP_CONCAT(DISTINCT k.name ORDER BY kim.keyword_id) as keywords_in_movie
+FROM keyword_in_movie kim JOIN keyword k on kim.keyword_id = k.keyword_id
+   GROUP BY movie_id) as keywords on m.movie_id = keywords.movie_id WHERE 1=1 && keywords_in_movie LIKE '%sequel%'  && keywords_in_movie LIKE '%alien invasion%'  && keywords_in_movie LIKE '%based on comic%'  ORDER BY title asc LIMIT 10 OFFSET 0;
+[2019/12/08 22:22:24][INFO][browseMovies]  Query succeeded.
+[2019/12/08 22:22:24][INFO][browseMovies]  FOUND   1   MOVIES
+[2019/12/08 22:22:24][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:22:24][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:22:24][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:22:26][INFO][movieSearch]  Building client...
+[2019/12/08 22:22:26][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:22:26][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:22:26][INFO][movieSearch]  Sending request...
+[2019/12/08 22:22:27][INFO][movieSearch]  Request sent.
+[2019/12/08 22:22:27][INFO][movieSearch]  Received status 200
+[2019/12/08 22:22:27][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:22:27][INFO][movieSearch]  Received request to search movie with movie_id: tt4154796
+[2019/12/08 22:22:27][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:22:27][INFO][getMovie]  Query succeeded searching for tt4154796
+[2019/12/08 22:22:27][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:22:27][INFO][getMovie]  title: Avengers: Endgame
+[2019/12/08 22:22:27][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:22:27][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:22:27][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt4154796';
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Mark Ruffalo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting William Hurt
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Natalie Portman
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Michelle Pfeiffer
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Scarlett Johansson
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Linda Cardellini
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Don Cheadle
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Samuel L. Jackson
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Tilda Swinton
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Marisa Tomei
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Robert Downey Jr.
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Michael Douglas
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Robert Redford
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Stan Lee
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Zoe Saldana
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Hiroyuki Sanada
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Angela Bassett
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Gwyneth Paltrow
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Vin Diesel
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Rene Russo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jon Favreau
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Chris Evans
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Josh Brolin
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Ty Simpkins
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Tom Wisdom
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jeremy Renner
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Evangeline Lilly
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Joe Russo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting James D'Arcy
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting John Slattery
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Paul Rudd
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Tom Vaughan-Lawlor
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Benedict Wong
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Hayley Atwell
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting John Posey
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Bradley Cooper
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Sean Gunn
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Anthony Mackie
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Taika Waititi
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Brie Larson
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Sebastian Stan
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Kerry Condon
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Tessa Thompson
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Cobie Smulders
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Benedict Cumberbatch
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Chris Pratt
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Chris Hemsworth
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Frank Grillo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Danai Gurira
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Ken Jeong
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Tom Hiddleston
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Robert Pralgo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Monique Ganderton
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Yvette Nicole Brown
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Patrick Gorman
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Pom Klementieff
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Taylor Patterson
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Chadwick Boseman
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Callan Mulvey
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Terry Notary
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jimmy Ray Pickens
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Karen Gillan
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Dave Bautista
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Elizabeth Olsen
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Ross Marquand
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Aaron Lazar
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Russell Bobbitt
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Maximiliano Hernández
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Emma Fuhrmann
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Letitia Wright
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Sam Hargrave
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Tom Holland
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Brian Schaeffer
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Michael James Shaw
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting John Michael Morris
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Winston Duke
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Ameenah Kaplan
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Lee Moore
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Brent McGee
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Michael A. Cook
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jacob Batalon
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jim Starlin
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Ben Sakamoto
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Hye Jin Jang
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jack Champion
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Cade Woodward
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Anthony G Breed
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jackson A. Dunn
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Olaniyan Thurmon
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Mike Lutz
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Ava Russo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Lexi Rabe
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Lia Russo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Bazlo LeClair
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Loen LeClair
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jennifer Elmore
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting James Lin
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Erica Ribley
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Jamie Wedel
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Julian Russo
+[2019/12/08 22:22:28][INFO][getPeopleFromMovie]  Inserting Agostino Rosalina
+[2019/12/08 22:22:28][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt4154796';
+[2019/12/08 22:22:28][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:22:28][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:22:46][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:22:46][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:22:46][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:22:46][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:22:46][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:25:10][INFO][movieBrowse]  Building client...
+[2019/12/08 22:25:10][INFO][movieBrowse]  Building WebTarget...
+[2019/12/08 22:25:10][INFO][movieBrowse]  Starting invocation builder...
+[2019/12/08 22:25:10][INFO][movieBrowse]  Sending request...
+[2019/12/08 22:25:10][INFO][movieBrowse]  Request sent.
+[2019/12/08 22:25:10][INFO][movieBrowse]  Received status 200
+[2019/12/08 22:25:10][INFO][movieBrowse]  Successfully mapped response.
+[2019/12/08 22:25:10][INFO][movieBrowse]  Received request to search movies keywords
+[2019/12/08 22:25:10][INFO][browseMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie m JOIN (SELECT kim.movie_id, GROUP_CONCAT(DISTINCT k.name ORDER BY kim.keyword_id) as keywords_in_movie
+FROM keyword_in_movie kim JOIN keyword k on kim.keyword_id = k.keyword_id
+   GROUP BY movie_id) as keywords on m.movie_id = keywords.movie_id WHERE 1=1 && keywords_in_movie LIKE '%sequel%'  && keywords_in_movie LIKE '%alien invasion%'  && keywords_in_movie LIKE '%based on comic%'  ORDER BY title asc LIMIT 10 OFFSET 0;
+[2019/12/08 22:25:11][INFO][browseMovies]  Query succeeded.
+[2019/12/08 22:25:11][INFO][browseMovies]  FOUND   1   MOVIES
+[2019/12/08 22:25:11][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:25:11][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:25:11][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:25:13][INFO][movieSearch]  Building client...
+[2019/12/08 22:25:13][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:25:13][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:25:13][INFO][movieSearch]  Sending request...
+[2019/12/08 22:25:13][INFO][movieSearch]  Request sent.
+[2019/12/08 22:25:13][INFO][movieSearch]  Received status 200
+[2019/12/08 22:25:13][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:25:13][INFO][movieSearch]  Received request to search movie with movie_id: tt4154796
+[2019/12/08 22:25:13][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:25:13][INFO][getMovie]  Query succeeded searching for tt4154796
+[2019/12/08 22:25:13][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:25:13][INFO][getMovie]  title: Avengers: Endgame
+[2019/12/08 22:25:13][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:25:14][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:25:14][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt4154796';
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Mark Ruffalo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting William Hurt
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Natalie Portman
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Michelle Pfeiffer
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Scarlett Johansson
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Linda Cardellini
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Don Cheadle
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Samuel L. Jackson
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Tilda Swinton
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Marisa Tomei
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Robert Downey Jr.
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Michael Douglas
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Robert Redford
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Stan Lee
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Zoe Saldana
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Hiroyuki Sanada
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Angela Bassett
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Gwyneth Paltrow
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Vin Diesel
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Rene Russo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jon Favreau
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Chris Evans
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Josh Brolin
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Ty Simpkins
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Tom Wisdom
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jeremy Renner
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Evangeline Lilly
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Joe Russo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting James D'Arcy
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting John Slattery
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Paul Rudd
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Tom Vaughan-Lawlor
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Benedict Wong
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Hayley Atwell
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting John Posey
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Bradley Cooper
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Sean Gunn
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Anthony Mackie
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Taika Waititi
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Brie Larson
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Sebastian Stan
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Kerry Condon
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Tessa Thompson
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Cobie Smulders
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Benedict Cumberbatch
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Chris Pratt
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Chris Hemsworth
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Frank Grillo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Danai Gurira
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Ken Jeong
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Tom Hiddleston
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Robert Pralgo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Monique Ganderton
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Yvette Nicole Brown
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Patrick Gorman
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Pom Klementieff
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Taylor Patterson
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Chadwick Boseman
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Callan Mulvey
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Terry Notary
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jimmy Ray Pickens
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Karen Gillan
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Dave Bautista
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Elizabeth Olsen
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Ross Marquand
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Aaron Lazar
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Russell Bobbitt
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Maximiliano Hernández
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Emma Fuhrmann
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Letitia Wright
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Sam Hargrave
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Tom Holland
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Brian Schaeffer
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Michael James Shaw
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting John Michael Morris
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Winston Duke
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Ameenah Kaplan
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Lee Moore
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Brent McGee
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Michael A. Cook
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jacob Batalon
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jim Starlin
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Ben Sakamoto
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Hye Jin Jang
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jack Champion
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Cade Woodward
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Anthony G Breed
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jackson A. Dunn
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Olaniyan Thurmon
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Mike Lutz
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Ava Russo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Lexi Rabe
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Lia Russo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Bazlo LeClair
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Loen LeClair
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jennifer Elmore
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting James Lin
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Erica Ribley
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Jamie Wedel
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Julian Russo
+[2019/12/08 22:25:16][INFO][getPeopleFromMovie]  Inserting Agostino Rosalina
+[2019/12/08 22:25:16][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt4154796';
+[2019/12/08 22:25:16][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:25:16][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:26:50][INFO][movieSearch]  Received title from query param: Dark
+		Received year from query param: null
+		Received director from query param: Christopher Nolan
+		Received genre from query param: null
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: title
+		Received direction from query param: asc
+[2019/12/08 22:26:50][INFO][movieSearch]  Building client...
+[2019/12/08 22:26:50][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:26:50][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:26:50][INFO][movieSearch]  Sending request...
+[2019/12/08 22:26:51][INFO][movieSearch]  Request sent.
+[2019/12/08 22:26:51][INFO][movieSearch]  Received status 200
+[2019/12/08 22:26:51][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:26:51][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:26:51][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%Dark%' && name LIKE '%Christopher Nolan%' ORDER BY title asc LIMIT 10 OFFSET 0
+[2019/12/08 22:26:52][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:26:52][INFO][searchMovies]  FOUND   1   MOVIES
+[2019/12/08 22:26:52][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:27:04][INFO][movieSearch]  Building client...
+[2019/12/08 22:27:04][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:27:04][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:27:04][INFO][movieSearch]  Sending request...
+[2019/12/08 22:27:05][INFO][movieSearch]  Request sent.
+[2019/12/08 22:27:05][INFO][movieSearch]  Received status 200
+[2019/12/08 22:27:05][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:27:05][INFO][movieSearch]  Received request to search movie with movie_id: tt1345836
+[2019/12/08 22:27:05][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:27:06][INFO][getMovie]  Query succeeded searching for tt1345836
+[2019/12/08 22:27:06][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:27:06][INFO][getMovie]  title: The Dark Knight Rises
+[2019/12/08 22:27:06][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 525;
+[2019/12/08 22:27:07][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:27:07][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt1345836';
+[2019/12/08 22:27:08][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:27:08][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt1345836';
+[2019/12/08 22:27:09][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:27:09][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:27:57][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:27:57][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:27:57][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:31:21][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt0071853';
+[2019/12/08 22:31:21][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:31:21][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:31:21][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:31:21][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:31:49][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt0071853';
+[2019/12/08 22:31:49][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:31:49][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:31:49][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:31:49][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:34:17][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt0071853';
+[2019/12/08 22:34:17][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:34:17][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:34:17][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:34:17][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:34:24][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt0071853';
+[2019/12/08 22:34:24][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:34:24][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:34:24][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:34:24][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:35:00][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt0071853';
+[2019/12/08 22:35:00][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:35:00][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:35:00][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:35:00][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:37:13][INFO][movieSearch]  Received title from query param: 
+		Received year from query param: 2012
+		Received director from query param: 
+		Received genre from query param: Action
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: rating
+		Received direction from query param: DESC
+[2019/12/08 22:37:13][INFO][movieSearch]  Building client...
+[2019/12/08 22:37:13][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:37:13][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:37:13][INFO][movieSearch]  Sending request...
+[2019/12/08 22:37:14][INFO][movieSearch]  Request sent.
+[2019/12/08 22:37:14][INFO][movieSearch]  Received status 200
+[2019/12/08 22:37:14][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:37:14][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:37:14][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%%' && year = 2012 && name LIKE '%%' && ge.genre = 'Action' ORDER BY title DESC LIMIT 10 OFFSET 0
+[2019/12/08 22:37:14][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:37:14][INFO][searchMovies]  FOUND   10   MOVIES
+[2019/12/08 22:37:14][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:37:41][INFO][movieSearch]  Received title from query param: Dark
+		Received year from query param: null
+		Received director from query param: Christopher Nolan
+		Received genre from query param: null
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: rating
+		Received direction from query param: DESC
+[2019/12/08 22:37:41][INFO][movieSearch]  Building client...
+[2019/12/08 22:37:41][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:37:41][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:37:41][INFO][movieSearch]  Sending request...
+[2019/12/08 22:37:41][INFO][movieSearch]  Request sent.
+[2019/12/08 22:37:41][INFO][movieSearch]  Received status 200
+[2019/12/08 22:37:41][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:37:41][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:37:41][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%Dark%' && name LIKE '%Christopher Nolan%' ORDER BY title DESC LIMIT 10 OFFSET 0
+[2019/12/08 22:37:41][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:37:41][INFO][searchMovies]  FOUND   1   MOVIES
+[2019/12/08 22:37:41][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:37:45][INFO][movieSearch]  Building client...
+[2019/12/08 22:37:45][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:37:45][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:37:45][INFO][movieSearch]  Sending request...
+[2019/12/08 22:37:45][INFO][movieSearch]  Request sent.
+[2019/12/08 22:37:45][INFO][movieSearch]  Received status 200
+[2019/12/08 22:37:45][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:37:45][INFO][movieSearch]  Received request to search movie with movie_id: tt1345836
+[2019/12/08 22:37:45][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:37:45][INFO][getMovie]  Query succeeded searching for tt1345836
+[2019/12/08 22:37:45][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:37:45][INFO][getMovie]  title: The Dark Knight Rises
+[2019/12/08 22:37:45][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 525;
+[2019/12/08 22:37:45][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:37:45][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt1345836';
+[2019/12/08 22:37:45][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:37:45][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt1345836';
+[2019/12/08 22:37:45][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:37:45][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:38:14][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:38:14][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:38:14][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:38:31][INFO][movieBrowse]  Building client...
+[2019/12/08 22:38:31][INFO][movieBrowse]  Building WebTarget...
+[2019/12/08 22:38:31][INFO][movieBrowse]  Starting invocation builder...
+[2019/12/08 22:38:31][INFO][movieBrowse]  Sending request...
+[2019/12/08 22:38:31][INFO][movieBrowse]  Request sent.
+[2019/12/08 22:38:31][INFO][movieBrowse]  Received status 200
+[2019/12/08 22:38:31][INFO][movieBrowse]  Successfully mapped response.
+[2019/12/08 22:38:31][INFO][movieBrowse]  Received request to search movies keywords
+[2019/12/08 22:38:31][INFO][browseMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie m JOIN (SELECT kim.movie_id, GROUP_CONCAT(DISTINCT k.name ORDER BY kim.keyword_id) as keywords_in_movie
+FROM keyword_in_movie kim JOIN keyword k on kim.keyword_id = k.keyword_id
+   GROUP BY movie_id) as keywords on m.movie_id = keywords.movie_id WHERE 1=1 && keywords_in_movie LIKE '%sequel%'  && keywords_in_movie LIKE '%alien invasion%'  && keywords_in_movie LIKE '%based on comic%'  ORDER BY title asc LIMIT 10 OFFSET 0;
+[2019/12/08 22:38:31][INFO][browseMovies]  Query succeeded.
+[2019/12/08 22:38:31][INFO][browseMovies]  FOUND   1   MOVIES
+[2019/12/08 22:38:31][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:38:31][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:38:31][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:38:34][INFO][movieSearch]  Building client...
+[2019/12/08 22:38:34][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:38:34][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:38:34][INFO][movieSearch]  Sending request...
+[2019/12/08 22:38:34][INFO][movieSearch]  Request sent.
+[2019/12/08 22:38:34][INFO][movieSearch]  Received status 200
+[2019/12/08 22:38:34][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:38:34][INFO][movieSearch]  Received request to search movie with movie_id: tt4154796
+[2019/12/08 22:38:34][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:38:34][INFO][getMovie]  Query succeeded searching for tt4154796
+[2019/12/08 22:38:34][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:38:34][INFO][getMovie]  title: Avengers: Endgame
+[2019/12/08 22:38:34][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:38:35][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt4154796';
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Mark Ruffalo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting William Hurt
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Natalie Portman
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Michelle Pfeiffer
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Scarlett Johansson
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Linda Cardellini
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Don Cheadle
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Samuel L. Jackson
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Tilda Swinton
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Marisa Tomei
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Robert Downey Jr.
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Michael Douglas
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Robert Redford
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Stan Lee
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Zoe Saldana
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Hiroyuki Sanada
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Angela Bassett
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Gwyneth Paltrow
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Vin Diesel
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Rene Russo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jon Favreau
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Chris Evans
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Josh Brolin
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Ty Simpkins
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Tom Wisdom
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jeremy Renner
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Evangeline Lilly
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Joe Russo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting James D'Arcy
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting John Slattery
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Paul Rudd
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Tom Vaughan-Lawlor
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Benedict Wong
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Hayley Atwell
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting John Posey
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Bradley Cooper
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Sean Gunn
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Anthony Mackie
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Taika Waititi
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Brie Larson
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Sebastian Stan
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Kerry Condon
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Tessa Thompson
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Cobie Smulders
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Benedict Cumberbatch
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Chris Pratt
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Chris Hemsworth
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Frank Grillo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Danai Gurira
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Ken Jeong
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Tom Hiddleston
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Robert Pralgo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Monique Ganderton
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Yvette Nicole Brown
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Patrick Gorman
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Pom Klementieff
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Taylor Patterson
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Chadwick Boseman
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Callan Mulvey
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Terry Notary
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jimmy Ray Pickens
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Karen Gillan
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Dave Bautista
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Elizabeth Olsen
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Ross Marquand
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Aaron Lazar
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Russell Bobbitt
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Maximiliano Hernández
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Emma Fuhrmann
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Letitia Wright
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Sam Hargrave
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Tom Holland
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Brian Schaeffer
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Michael James Shaw
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting John Michael Morris
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Winston Duke
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Ameenah Kaplan
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Lee Moore
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Brent McGee
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Michael A. Cook
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jacob Batalon
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jim Starlin
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Ben Sakamoto
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Hye Jin Jang
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jack Champion
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Cade Woodward
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Anthony G Breed
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jackson A. Dunn
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Olaniyan Thurmon
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Mike Lutz
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Ava Russo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Lexi Rabe
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Lia Russo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Bazlo LeClair
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Loen LeClair
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jennifer Elmore
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting James Lin
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Erica Ribley
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Jamie Wedel
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Julian Russo
+[2019/12/08 22:38:35][INFO][getPeopleFromMovie]  Inserting Agostino Rosalina
+[2019/12/08 22:38:35][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt4154796';
+[2019/12/08 22:38:35][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:38:35][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:38:50][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:38:50][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:38:50][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:38:50][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:38:50][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:42:18][INFO][movieSearch]  Received title from query param: 
+		Received year from query param: 2012
+		Received director from query param: 
+		Received genre from query param: Action
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: rating
+		Received direction from query param: DESC
+[2019/12/08 22:42:18][INFO][movieSearch]  Building client...
+[2019/12/08 22:42:18][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:42:18][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:42:18][INFO][movieSearch]  Sending request...
+[2019/12/08 22:42:18][INFO][movieSearch]  Request sent.
+[2019/12/08 22:42:18][INFO][movieSearch]  Received status 200
+[2019/12/08 22:42:18][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:42:18][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:42:18][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%%' && year = 2012 && name LIKE '%%' && ge.genre = 'Action' ORDER BY title DESC LIMIT 10 OFFSET 0
+[2019/12/08 22:42:18][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:42:18][INFO][searchMovies]  FOUND   10   MOVIES
+[2019/12/08 22:42:18][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:42:38][INFO][movieSearch]  Received title from query param: Dark
+		Received year from query param: null
+		Received director from query param: Christopher Nolan
+		Received genre from query param: null
+		Received hidden from query param: null
+		Received limit from query param: 10
+		Received offset from query param: 0
+		Received orderby from query param: rating
+		Received direction from query param: DESC
+[2019/12/08 22:42:38][INFO][movieSearch]  Building client...
+[2019/12/08 22:42:38][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:42:38][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:42:38][INFO][movieSearch]  Sending request...
+[2019/12/08 22:42:38][INFO][movieSearch]  Request sent.
+[2019/12/08 22:42:38][INFO][movieSearch]  Received status 200
+[2019/12/08 22:42:38][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:42:38][INFO][movieSearch]  Received request to search for movies
+[2019/12/08 22:42:38][INFO][searchMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.movie_id, m.title, m.year, m.director_id, m.rating, m.backdrop_path, m.poster_path, m.hidden, p.name FROM movie m LEFT JOIN person p ON m.director_id = p.person_id LEFT JOIN (SELECT movie_id, name as genre FROM genre g JOIN genre_in_movie gim on g.genre_id = gim.genre_id) ge ON ge.movie_id = m.movie_id WHERE 1=1 && title LIKE '%Dark%' && name LIKE '%Christopher Nolan%' ORDER BY title DESC LIMIT 10 OFFSET 0
+[2019/12/08 22:42:38][INFO][searchMovies]  Query succeeded.
+[2019/12/08 22:42:38][INFO][searchMovies]  FOUND   1   MOVIES
+[2019/12/08 22:42:38][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:42:44][INFO][movieSearch]  Building client...
+[2019/12/08 22:42:44][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:42:44][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:42:44][INFO][movieSearch]  Sending request...
+[2019/12/08 22:42:44][INFO][movieSearch]  Request sent.
+[2019/12/08 22:42:44][INFO][movieSearch]  Received status 200
+[2019/12/08 22:42:44][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:42:44][INFO][movieSearch]  Received request to search movie with movie_id: tt1345836
+[2019/12/08 22:42:44][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:42:44][INFO][getMovie]  Query succeeded searching for tt1345836
+[2019/12/08 22:42:44][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:42:44][INFO][getMovie]  title: The Dark Knight Rises
+[2019/12/08 22:42:44][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 525;
+[2019/12/08 22:42:44][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:42:44][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt1345836';
+[2019/12/08 22:42:44][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:42:44][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt1345836';
+[2019/12/08 22:42:44][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:42:44][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:42:56][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:42:56][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:42:56][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:43:14][INFO][movieBrowse]  Building client...
+[2019/12/08 22:43:14][INFO][movieBrowse]  Building WebTarget...
+[2019/12/08 22:43:14][INFO][movieBrowse]  Starting invocation builder...
+[2019/12/08 22:43:14][INFO][movieBrowse]  Sending request...
+[2019/12/08 22:43:14][INFO][movieBrowse]  Request sent.
+[2019/12/08 22:43:14][INFO][movieBrowse]  Received status 200
+[2019/12/08 22:43:14][INFO][movieBrowse]  Successfully mapped response.
+[2019/12/08 22:43:14][INFO][movieBrowse]  Received request to search movies keywords
+[2019/12/08 22:43:14][INFO][browseMovies]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie m JOIN (SELECT kim.movie_id, GROUP_CONCAT(DISTINCT k.name ORDER BY kim.keyword_id) as keywords_in_movie
+FROM keyword_in_movie kim JOIN keyword k on kim.keyword_id = k.keyword_id
+   GROUP BY movie_id) as keywords on m.movie_id = keywords.movie_id WHERE 1=1 && keywords_in_movie LIKE '%sequel%'  && keywords_in_movie LIKE '%alien invasion%'  && keywords_in_movie LIKE '%based on comic%'  ORDER BY title asc LIMIT 10 OFFSET 0;
+[2019/12/08 22:43:14][INFO][browseMovies]  Query succeeded.
+[2019/12/08 22:43:14][INFO][browseMovies]  FOUND   1   MOVIES
+[2019/12/08 22:43:14][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:43:14][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:43:14][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:43:17][INFO][movieSearch]  Building client...
+[2019/12/08 22:43:17][INFO][movieSearch]  Building WebTarget...
+[2019/12/08 22:43:17][INFO][movieSearch]  Starting invocation builder...
+[2019/12/08 22:43:17][INFO][movieSearch]  Sending request...
+[2019/12/08 22:43:18][INFO][movieSearch]  Request sent.
+[2019/12/08 22:43:18][INFO][movieSearch]  Received status 200
+[2019/12/08 22:43:18][INFO][movieSearch]  Successfully mapped response.
+[2019/12/08 22:43:18][INFO][movieSearch]  Received request to search movie with movie_id: tt4154796
+[2019/12/08 22:43:18][INFO][getMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * from movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:43:18][INFO][getMovie]  Query succeeded searching for tt4154796
+[2019/12/08 22:43:18][INFO][getMovie]  FOUND MOVIE:
+
+[2019/12/08 22:43:18][INFO][getMovie]  title: Avengers: Endgame
+[2019/12/08 22:43:18][INFO][getDirector]  Trying query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT name FROM person WHERE person_id = 19271;
+[2019/12/08 22:43:18][INFO][getDirector]  Query succeeded.
+[2019/12/08 22:43:18][INFO][getPeopleFromMovie]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM person_in_movie pim JOIN person p ON pim.person_id = p.person_id WHERE pim.movie_id = 'tt4154796';
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Query succeeded searching for people in movie.
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Mark Ruffalo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting William Hurt
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Natalie Portman
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Michelle Pfeiffer
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Scarlett Johansson
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Linda Cardellini
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Don Cheadle
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Samuel L. Jackson
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Tilda Swinton
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Marisa Tomei
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Robert Downey Jr.
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Michael Douglas
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Robert Redford
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Stan Lee
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Zoe Saldana
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Hiroyuki Sanada
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Angela Bassett
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Gwyneth Paltrow
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Vin Diesel
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Rene Russo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jon Favreau
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Chris Evans
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Josh Brolin
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Ty Simpkins
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Tom Wisdom
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jeremy Renner
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Evangeline Lilly
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Joe Russo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting James D'Arcy
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting John Slattery
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Paul Rudd
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Tom Vaughan-Lawlor
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Benedict Wong
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Hayley Atwell
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting John Posey
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Bradley Cooper
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Sean Gunn
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Anthony Mackie
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Taika Waititi
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Brie Larson
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Sebastian Stan
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Kerry Condon
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Tessa Thompson
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Cobie Smulders
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Benedict Cumberbatch
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Chris Pratt
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Chris Hemsworth
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Frank Grillo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Danai Gurira
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Ken Jeong
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Tom Hiddleston
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Robert Pralgo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Monique Ganderton
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Yvette Nicole Brown
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Patrick Gorman
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Pom Klementieff
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Taylor Patterson
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Chadwick Boseman
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Callan Mulvey
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Terry Notary
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jimmy Ray Pickens
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Karen Gillan
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Dave Bautista
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Elizabeth Olsen
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Ross Marquand
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Aaron Lazar
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Russell Bobbitt
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Maximiliano Hernández
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Emma Fuhrmann
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Letitia Wright
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Sam Hargrave
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Tom Holland
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Brian Schaeffer
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Michael James Shaw
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting John Michael Morris
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Winston Duke
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Ameenah Kaplan
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Lee Moore
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Brent McGee
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Michael A. Cook
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jacob Batalon
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jim Starlin
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Ben Sakamoto
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Hye Jin Jang
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jack Champion
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Cade Woodward
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Anthony G Breed
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jackson A. Dunn
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Olaniyan Thurmon
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Mike Lutz
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Ava Russo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Lexi Rabe
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Lia Russo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Bazlo LeClair
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Loen LeClair
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jennifer Elmore
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting James Lin
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Erica Ribley
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Jamie Wedel
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Julian Russo
+[2019/12/08 22:43:19][INFO][getPeopleFromMovie]  Inserting Agostino Rosalina
+[2019/12/08 22:43:19][INFO][getGenres]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genre_in_movie gim  JOIN genre g ON gim.genre_id = g.genre_id WHERE gim.movie_id = 'tt4154796';
+[2019/12/08 22:43:19][INFO][getGenres]  Query succeeded searching for genres.
+[2019/12/08 22:43:19][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES
+[2019/12/08 22:43:31][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt1345836';
+[2019/12/08 22:43:32][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:43:32][INFO][getMovieThumbnails]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie WHERE movie_id = 'tt4154796';
+[2019/12/08 22:43:32][INFO][getMovieThumbnails]  Query succeeded searching for thumbnails.
+[2019/12/08 22:43:32][INFO][buildResponse]  Response being built with Result: FOUND_MOVIES

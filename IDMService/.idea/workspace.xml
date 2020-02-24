@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6c12e0d1-017c-452a-9287-504176ed54de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/base/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/base/ResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/core/InsertSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/core/InsertSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/core/SearchSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/core/SearchSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/models/EmailAndPassResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/models/EmailAndPassResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/models/LoginResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/models/LoginResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/resources/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/resources/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/resources/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/dillonhl/service/idm/resources/RegisterPage.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="hw2-dillonhl" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1S4g6u7L4AqTIHz0KFRMXmNOHQF" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cs122b-service-test" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c12e0d1-017c-452a-9287-504176ed54de" name="Default Changelist" comment="" />
+      <created>1570828109151</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570828109151</updated>
+      <workItem from="1570828117034" duration="29226000" />
+      <workItem from="1571205769140" duration="304000" />
+      <workItem from="1571271329094" duration="16299000" />
+      <workItem from="1571781565534" duration="71297000" />
+      <workItem from="1573008215327" duration="2617000" />
+      <workItem from="1573104398005" duration="50133000" />
+      <workItem from="1574296774136" duration="735000" />
+      <workItem from="1574808919339" duration="61039000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

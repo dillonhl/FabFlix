@@ -1,0 +1,413 @@
+[2019/12/08 21:30:28][CONFIG][initService]  Starting service...
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Scheme: http://
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Port: 5333
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Path: /api/idm
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Scheme: http://
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Port: 5333
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Path: /api/idm
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database port: 3308
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database username: cs122bg7
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database password provided? true
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database name: cs122bg7
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Timeout: 600000
+[2019/12/08 21:30:28][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 21:30:28][CONFIG][connectToDatabase]  Connecting to database...
+[2019/12/08 21:30:28][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3308/cs122bg7?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 21:30:29][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3308/cs122bg7?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 21:30:29][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/12/08 21:30:29][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/12/08 21:30:29][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:5333/api/idm
+[2019/12/08 21:30:29][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/12/08 21:30:29][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/12/08 21:30:29][CONFIG][initHTTPServer]  Set session timeout and token expiration.
+[2019/12/08 21:30:29][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/12/08 21:30:31][CONFIG][initHTTPServer]  HTTP server started.
+[2019/12/08 21:30:31][CONFIG][initService]  Service initialized.
+[2019/12/08 21:30:46][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:30:46][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:30:46][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:30:46][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:30:46][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:30:49][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:30:49][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:30:49][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:30:49][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:30:49][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:31:33][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:31:33][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:31:33][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:31:33][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:31:33][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:31:36][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:31:36][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:31:36][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:31:36][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:31:36][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:35:13][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:35:13][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:35:13][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:35:13][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:35:13][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:38:19][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:38:19][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:38:19][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:38:19][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:38:19][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:38:22][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:38:22][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:38:22][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:38:22][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:38:22][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:38:29][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:38:29][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:38:29][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:38:29][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:38:29][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:38:35][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:38:35][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:38:35][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:38:35][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:38:35][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:55:34][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:55:34][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:55:34][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:55:34][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:55:34][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 21:56:36][INFO][privilege]  Received request to check privilege level
+[2019/12/08 21:56:36][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 21:56:36][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:56:36][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 21:56:36][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:00:24][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:00:24][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 22:00:24][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:00:24][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:00:24][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:02:42][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:02:42][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 22:02:42][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:02:42][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:02:42][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:03:23][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:03:23][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 22:03:23][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:03:23][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:03:23][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:03:55][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:03:55][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 22:03:55][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:03:55][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:03:55][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:04:05][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:04:05][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 22:04:05][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:04:05][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:04:05][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:10:17][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:10:17][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 22:10:17][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:10:17][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:10:17][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:10:20][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:10:20][INFO][privilege]  Request: 
+ {"email":"frontendtest1@uci.edu","plevel":4}
+[2019/12/08 22:10:20][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:10:20][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:10:20][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:19:33][INFO][privilege]  Received request to login
+[2019/12/08 22:19:33][INFO][privilege]  Request: 
+ {"email":"notarealuser@uci.edu","password":"asdsfaasda"}
+[2019/12/08 22:19:33][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'notarealuser@uci.edu';
+[2019/12/08 22:19:33][INFO][login]  Query succeeded.
+[2019/12/08 22:19:56][INFO][register]  Received request for register.
+[2019/12/08 22:19:56][INFO][register]  Request: 
+{"email":"frontendtest2@uci.edu","password":"Password1"}
+[2019/12/08 22:19:56][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:19:56][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:19:57][INFO][registerUserIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO user (email, status, plevel, salt, pword) VALUES ('frontendtest2@uci.edu', 1, 5, 'c5be62c0', '0003318c536afbd97f07e51aaea3f688e2a9f34fa03f2315594000c5799e80eb26e1e5387cacf3783f593d101ac22dff136099f0287827406dc367e730af4671');
+[2019/12/08 22:19:57][INFO][registerUserIntoDB]  Query succeeded.
+[2019/12/08 22:19:57][INFO][buildResponse]  Response being built with Result: USER_REGISTERED_SUCCESS
+[2019/12/08 22:20:10][INFO][privilege]  Received request to login
+[2019/12/08 22:20:10][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","password":"Password1"}
+[2019/12/08 22:20:10][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:20:10][INFO][login]  Query succeeded.
+[2019/12/08 22:20:10][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, pword FROM user WHERE email = 'frontendtest2@uci.edu' and pword = '0003318c536afbd97f07e51aaea3f688e2a9f34fa03f2315594000c5799e80eb26e1e5387cacf3783f593d101ac22dff136099f0287827406dc367e730af4671';
+[2019/12/08 22:20:10][INFO][login]  Query succeeded.
+[2019/12/08 22:20:10][INFO][searchSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status FROM session WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:20:10][INFO][searchSession]  Query succeeded.
+[2019/12/08 22:20:10][INFO][insertNewSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO session (session_id, email, status, expr_time) VALUES ('cdf2e45a3930934c767a1b89ca7d519b794558bc81e920362de4eccbd660a54753897127ef2af9ce83ea8f49bbce9ddd5a68ab0a858df8e6909f126a17514d00', 'frontendtest2@uci.edu', 1, '2019-12-08');
+[2019/12/08 22:20:10][INFO][insertNewSession]  Query succeeded.
+[2019/12/08 22:20:52][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:20:52][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:20:52][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:20:52][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:20:52][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:21:22][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:21:22][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:21:22][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:21:22][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:21:22][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:21:27][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:21:27][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:21:27][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:21:27][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:21:27][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:21:39][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:21:39][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:21:39][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:21:39][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:21:39][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:22:23][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:22:23][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:22:23][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:22:23][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:22:23][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:22:27][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:22:27][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:22:27][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:22:27][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:22:27][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:22:36][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:22:36][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:22:36][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:22:36][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:22:36][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:24:28][INFO][privilege]  Received request to login
+[2019/12/08 22:24:28][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","password":"Password1"}
+[2019/12/08 22:24:28][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:24:28][INFO][login]  Query succeeded.
+[2019/12/08 22:24:28][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, pword FROM user WHERE email = 'frontendtest2@uci.edu' and pword = '0003318c536afbd97f07e51aaea3f688e2a9f34fa03f2315594000c5799e80eb26e1e5387cacf3783f593d101ac22dff136099f0287827406dc367e730af4671';
+[2019/12/08 22:24:29][INFO][login]  Query succeeded.
+[2019/12/08 22:24:29][INFO][searchSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status FROM session WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:24:29][INFO][searchSession]  Query succeeded.
+[2019/12/08 22:24:29][INFO][searchSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status, session_id FROM session WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:24:29][INFO][searchSessionID]  Query succeeded.
+[2019/12/08 22:24:29][INFO][updateSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE session SET status = 4 WHERE email = 'frontendtest2@uci.edu' and session_id = 'cdf2e45a3930934c767a1b89ca7d519b794558bc81e920362de4eccbd660a54753897127ef2af9ce83ea8f49bbce9ddd5a68ab0a858df8e6909f126a17514d00';
+[2019/12/08 22:24:29][INFO][updateSession]  Query succeeded.
+[2019/12/08 22:24:29][INFO][insertNewSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO session (session_id, email, status, expr_time) VALUES ('959e21c1e165a05514ed8bc0c38860f66098598cab25faca7338e447458c8ec11c215d4f6885c810c8c1ca56eb78ad196dd4ab9cd0420c86227346a0780f691b', 'frontendtest2@uci.edu', 1, '2019-12-08');
+[2019/12/08 22:24:29][INFO][insertNewSession]  Query succeeded.
+[2019/12/08 22:25:10][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:25:10][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:25:10][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:25:10][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:25:10][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:25:13][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:25:13][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:25:13][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:25:13][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:25:13][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:26:50][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:26:50][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:26:50][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:26:51][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:26:51][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:27:04][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:27:04][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:27:04][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:27:05][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:27:05][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:27:50][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:27:50][INFO][privilege]  Request: 
+ {"email":"frontendtest2@uci.edu","plevel":4}
+[2019/12/08 22:27:50][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:27:51][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:27:51][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:31:15][INFO][privilege]  Received request to login
+[2019/12/08 22:31:15][INFO][privilege]  Request: 
+ {"email":"frontendtest@uci.edu","password":"Password1"}
+[2019/12/08 22:31:15][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:15][INFO][login]  Query succeeded.
+[2019/12/08 22:31:15][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, pword FROM user WHERE email = 'frontendtest@uci.edu' and pword = 'c71ba4295ba8d24c8fe0ace551be966996816af0597e18656c3b237d263c72579e3c6260409916cc776c63b09a7c118a12e25e834430a940f39912b1221a1a2d';
+[2019/12/08 22:31:15][INFO][login]  Query succeeded.
+[2019/12/08 22:31:15][INFO][searchSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status FROM session WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:15][INFO][searchSession]  Query succeeded.
+[2019/12/08 22:31:15][INFO][searchSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status, session_id FROM session WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:16][INFO][searchSessionID]  Query succeeded.
+[2019/12/08 22:31:16][INFO][updateSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE session SET status = 4 WHERE email = 'frontendtest@uci.edu' and session_id = 'e40fe42ab21be835214f01be62c1cf1a14ac8e8a8b4b5d4f2b2d57e623458c10341ce4451fa0708db3804b136726a556cade340bffd3d1c57f57f35f650cda3d';
+[2019/12/08 22:31:16][INFO][updateSession]  Query succeeded.
+[2019/12/08 22:31:16][INFO][insertNewSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO session (session_id, email, status, expr_time) VALUES ('4a219185350477307732361b82013a94096f1a0465288ded4fb7e25da023fd2eb6010cef80110a14ee1e8b382e291e490ffb67a4dca171764eb445f8fb07e182', 'frontendtest@uci.edu', 1, '2019-12-08');
+[2019/12/08 22:31:16][INFO][insertNewSession]  Query succeeded.
+[2019/12/08 22:33:32][INFO][privilege]  Received request to login
+[2019/12/08 22:33:32][INFO][privilege]  Request: 
+ {"email":"frontendtest@uci.edu","password":"Password1"}
+[2019/12/08 22:33:32][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:33:33][INFO][login]  Query succeeded.
+[2019/12/08 22:33:33][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, pword FROM user WHERE email = 'frontendtest@uci.edu' and pword = 'c71ba4295ba8d24c8fe0ace551be966996816af0597e18656c3b237d263c72579e3c6260409916cc776c63b09a7c118a12e25e834430a940f39912b1221a1a2d';
+[2019/12/08 22:33:33][INFO][login]  Query succeeded.
+[2019/12/08 22:33:33][INFO][searchSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status FROM session WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:33:33][INFO][searchSession]  Query succeeded.
+[2019/12/08 22:33:33][INFO][searchSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status, session_id FROM session WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:33:33][INFO][searchSessionID]  Query succeeded.
+[2019/12/08 22:33:33][INFO][updateSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE session SET status = 4 WHERE email = 'frontendtest@uci.edu' and session_id = '4a219185350477307732361b82013a94096f1a0465288ded4fb7e25da023fd2eb6010cef80110a14ee1e8b382e291e490ffb67a4dca171764eb445f8fb07e182';
+[2019/12/08 22:33:33][INFO][updateSession]  Query succeeded.
+[2019/12/08 22:33:33][INFO][insertNewSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO session (session_id, email, status, expr_time) VALUES ('22648ce5a7376d728cc2b15db21ecdc53c5af24aac42a498076d09875800237073efe75bff4dd1828be43e8401bcba949dbd7e4df452f4d58d7576fab2726572', 'frontendtest@uci.edu', 1, '2019-12-08');
+[2019/12/08 22:33:34][INFO][insertNewSession]  Query succeeded.
+[2019/12/08 22:36:09][INFO][privilege]  Received request to login
+[2019/12/08 22:36:09][INFO][privilege]  Request: 
+ {"email":"notarealuser@uci.edu","password":"asdasdsa"}
+[2019/12/08 22:36:09][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'notarealuser@uci.edu';
+[2019/12/08 22:36:10][INFO][login]  Query succeeded.
+[2019/12/08 22:36:24][INFO][register]  Received request for register.
+[2019/12/08 22:36:24][INFO][register]  Request: 
+{"email":"frontendtest3@uci.edu","password":"Password1"}
+[2019/12/08 22:36:24][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:36:24][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:36:24][INFO][registerUserIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO user (email, status, plevel, salt, pword) VALUES ('frontendtest3@uci.edu', 1, 5, 'd96fbb24', '6f4f6aae228d997a82fcb617ab1e474b76358d96365f24f53e82ba703fe653bf81667d08e15433753f6fd7d0276748d7eb338d8cdcfa181dedfb80cb2589c92e');
+[2019/12/08 22:36:24][INFO][registerUserIntoDB]  Query succeeded.
+[2019/12/08 22:36:24][INFO][buildResponse]  Response being built with Result: USER_REGISTERED_SUCCESS
+[2019/12/08 22:36:43][INFO][privilege]  Received request to login
+[2019/12/08 22:36:43][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","password":"Password1"}
+[2019/12/08 22:36:43][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:36:44][INFO][login]  Query succeeded.
+[2019/12/08 22:36:44][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, pword FROM user WHERE email = 'frontendtest3@uci.edu' and pword = '6f4f6aae228d997a82fcb617ab1e474b76358d96365f24f53e82ba703fe653bf81667d08e15433753f6fd7d0276748d7eb338d8cdcfa181dedfb80cb2589c92e';
+[2019/12/08 22:36:44][INFO][login]  Query succeeded.
+[2019/12/08 22:36:44][INFO][searchSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status FROM session WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:36:44][INFO][searchSession]  Query succeeded.
+[2019/12/08 22:36:44][INFO][insertNewSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO session (session_id, email, status, expr_time) VALUES ('48181b947af4537ead215084bd6d6c1f100d242c4f7a51a8a146518d1826a59dd53e747b285249be769125ca468e6ee313ab90fe3ed9aed87046529e112d5a6e', 'frontendtest3@uci.edu', 1, '2019-12-08');
+[2019/12/08 22:36:44][INFO][insertNewSession]  Query succeeded.
+[2019/12/08 22:37:13][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:37:13][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","plevel":4}
+[2019/12/08 22:37:13][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:37:14][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:37:14][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:37:41][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:37:41][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","plevel":4}
+[2019/12/08 22:37:41][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:37:41][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:37:41][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:37:45][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:37:45][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","plevel":4}
+[2019/12/08 22:37:45][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:37:45][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:37:45][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:37:59][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:37:59][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","plevel":4}
+[2019/12/08 22:37:59][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:37:59][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:37:59][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:38:31][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:38:31][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","plevel":4}
+[2019/12/08 22:38:31][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:38:31][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:38:31][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:38:34][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:38:34][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","plevel":4}
+[2019/12/08 22:38:34][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:38:34][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:38:34][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:38:46][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:38:46][INFO][privilege]  Request: 
+ {"email":"frontendtest3@uci.edu","plevel":4}
+[2019/12/08 22:38:46][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:38:46][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:38:46][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:41:28][INFO][privilege]  Received request to login
+[2019/12/08 22:41:28][INFO][privilege]  Request: 
+ {"email":"notarealuser@uci.edu","password":"adsdafaf"}
+[2019/12/08 22:41:28][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'notarealuser@uci.edu';
+[2019/12/08 22:41:29][INFO][login]  Query succeeded.
+[2019/12/08 22:41:42][INFO][register]  Received request for register.
+[2019/12/08 22:41:42][INFO][register]  Request: 
+{"email":"frontendtest4@uci.edu","password":"Password1"}
+[2019/12/08 22:41:42][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:41:42][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:41:42][INFO][registerUserIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO user (email, status, plevel, salt, pword) VALUES ('frontendtest4@uci.edu', 1, 5, 'c728b571', 'ea1c2248e246117904274cceb97cb6e5ea26315e5239aa02f1cabcc6da3c748e420ec04199ab7c03bfd6f6a807ed93fad17022af767d8a76ea33a9cdcc07b3d2');
+[2019/12/08 22:41:43][INFO][registerUserIntoDB]  Query succeeded.
+[2019/12/08 22:41:43][INFO][buildResponse]  Response being built with Result: USER_REGISTERED_SUCCESS
+[2019/12/08 22:41:54][INFO][privilege]  Received request to login
+[2019/12/08 22:41:54][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","password":"Password1"}
+[2019/12/08 22:41:54][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:41:54][INFO][login]  Query succeeded.
+[2019/12/08 22:41:54][INFO][login]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, pword FROM user WHERE email = 'frontendtest4@uci.edu' and pword = 'ea1c2248e246117904274cceb97cb6e5ea26315e5239aa02f1cabcc6da3c748e420ec04199ab7c03bfd6f6a807ed93fad17022af767d8a76ea33a9cdcc07b3d2';
+[2019/12/08 22:41:54][INFO][login]  Query succeeded.
+[2019/12/08 22:41:54][INFO][searchSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status FROM session WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:41:54][INFO][searchSession]  Query succeeded.
+[2019/12/08 22:41:54][INFO][insertNewSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO session (session_id, email, status, expr_time) VALUES ('98446c2202f9e3a0d32575d89e5c3e805e41fd426ce82f04f73a5416c0e0898672fe05d74b33490c8b9d495950b379134377d6315bc203c70b4afe2a9359abf1', 'frontendtest4@uci.edu', 1, '2019-12-08');
+[2019/12/08 22:41:54][INFO][insertNewSession]  Query succeeded.
+[2019/12/08 22:42:18][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:42:18][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","plevel":4}
+[2019/12/08 22:42:18][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:42:18][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:42:18][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:42:38][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:42:38][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","plevel":4}
+[2019/12/08 22:42:38][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:42:38][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:42:38][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:42:44][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:42:44][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","plevel":4}
+[2019/12/08 22:42:44][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:42:44][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:42:44][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:42:52][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:42:52][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","plevel":4}
+[2019/12/08 22:42:52][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:42:52][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:42:52][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:43:14][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:43:14][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","plevel":4}
+[2019/12/08 22:43:14][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:43:14][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:43:14][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:43:18][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:43:18][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","plevel":4}
+[2019/12/08 22:43:18][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:43:18][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:43:18][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL
+[2019/12/08 22:43:26][INFO][privilege]  Received request to check privilege level
+[2019/12/08 22:43:26][INFO][privilege]  Request: 
+ {"email":"frontendtest4@uci.edu","plevel":4}
+[2019/12/08 22:43:26][INFO][searchPLevelByEmail]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM user WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:43:26][INFO][searchPLevelByEmail]  Query succeeded.
+[2019/12/08 22:43:26][INFO][buildResponse]  Response being built with Result: USER_INSUFFICIENT_PLEVEL

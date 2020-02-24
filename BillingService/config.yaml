@@ -1,0 +1,35 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 5332
+  path: /api/billing
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: test.log
+
+databaseConfig:
+  dbUsername: cs122bg7
+  dbPassword: B_EvxR--Y7+0
+  dbHostname: localhost
+  dbPort: 3307
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: cs122bg7
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+
+idmConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 5333
+  path: /api/idm
+
+idmEndpoints:
+  privilege: /privilege
+
+moviesConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 5334
+  path: /api/movies
+moviesEndpoints:
+  thumbnail: /thumbnail

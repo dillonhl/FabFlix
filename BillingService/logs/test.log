@@ -1,0 +1,783 @@
+[2019/12/08 21:20:52][CONFIG][initService]  Starting service...
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Scheme: http://
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Port: 5332
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Path: /api/billing
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Database port: 3307
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Database username: cs122bg7
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Database password provided? true
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Database name: cs122bg7
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  IDM Scheme: http://
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  IDM Hostname: 0.0.0.0
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  IDM Port: 5333
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  IDM Path: /api/idm
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  IDM Privilege Path: /privilege
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Movies Scheme: http://
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Movies Hostname: 0.0.0.0
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Movies Port: 5334
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Movies Path: /api/movies
+[2019/12/08 21:20:52][CONFIG][currentConfigs]  Movies Thumbnail Path: /thumbnail
+[2019/12/08 21:20:52][CONFIG][connectToDatabase]  Connecting to database...
+[2019/12/08 21:20:52][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3307/cs122bg7?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 21:20:52][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3307/cs122bg7?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/08 21:20:52][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/12/08 21:20:52][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/12/08 21:20:52][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:5332/api/billing
+[2019/12/08 21:20:53][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/12/08 21:20:53][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/12/08 21:20:53][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/12/08 21:20:54][CONFIG][initHTTPServer]  HTTP server started.
+[2019/12/08 21:20:54][CONFIG][initService]  Service initialized.
+[2019/12/08 21:20:55][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'peteranteater@uci.edu';
+[2019/12/08 21:20:55][INFO][getOrderID]  Query succeeded.
+[2019/12/08 21:20:57][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 21:35:18][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:35:18][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:35:18][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 21:35:20][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:35:20][INFO][getOrderID]  Query succeeded.
+[2019/12/08 21:35:21][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 21:35:49][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:35:49][INFO][getOrderID]  Query succeeded.
+[2019/12/08 21:35:50][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 21:36:36][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:36:36][INFO][getOrderID]  Query succeeded.
+[2019/12/08 21:36:37][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 21:36:52][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:36:52][INFO][getOrderID]  Query succeeded.
+[2019/12/08 21:36:53][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 21:37:00][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:37:00][INFO][getOrderID]  Query succeeded.
+[2019/12/08 21:37:02][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 21:38:09][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:38:09][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:38:09][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 21:38:28][INFO][insertCart]  Building client...
+[2019/12/08 21:38:28][INFO][insertCart]  Building WebTarget...
+[2019/12/08 21:38:28][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 21:38:28][INFO][insertCart]  Sending request...
+[2019/12/08 21:38:29][INFO][insertCart]  Request sent.
+[2019/12/08 21:38:29][INFO][insertCart]  Received status 200
+[2019/12/08 21:38:29][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 21:38:29][INFO][validItem]  Query succeeded.
+[2019/12/08 21:38:29][INFO][validItem]  Item available.
+[2019/12/08 21:38:29][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest1@uci.edu' AND movie_id = 'tt4154796';
+[2019/12/08 21:38:29][INFO][checkItem]  Query succeeded.
+[2019/12/08 21:38:29][INFO][checkItem]  Item not in cart.
+[2019/12/08 21:38:29][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest1@uci.edu', 'tt4154796', 3);
+[2019/12/08 21:38:29][INFO][insert]  Query succeeded.
+[2019/12/08 21:38:29][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 21:38:35][INFO][insertCart]  Building client...
+[2019/12/08 21:38:35][INFO][insertCart]  Building WebTarget...
+[2019/12/08 21:38:35][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 21:38:35][INFO][insertCart]  Sending request...
+[2019/12/08 21:38:35][INFO][insertCart]  Request sent.
+[2019/12/08 21:38:35][INFO][insertCart]  Received status 200
+[2019/12/08 21:38:35][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 21:38:35][INFO][validItem]  Query succeeded.
+[2019/12/08 21:38:35][INFO][validItem]  Item available.
+[2019/12/08 21:38:35][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest1@uci.edu' AND movie_id = 'tt4154796';
+[2019/12/08 21:38:35][INFO][checkItem]  Query succeeded.
+[2019/12/08 21:38:35][INFO][checkItem]  Item: frontendtest1@uci.edu, tt4154796 in cart.
+[2019/12/08 21:38:35][INFO][buildResponse]  Response being built with Result: DUPLICATE_INSERTION
+[2019/12/08 21:38:39][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:38:39][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:38:39][INFO][getThumbnails]  Building client...
+[2019/12/08 21:38:39][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:38:39][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:38:39][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:38:39][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:38:39][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:38:39][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:38:39][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:43:12][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:43:12][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:43:12][INFO][getThumbnails]  Building client...
+[2019/12/08 21:43:12][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:43:12][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:43:12][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:43:12][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:43:12][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:43:12][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:43:12][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:44:13][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:44:14][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:44:14][INFO][getThumbnails]  Building client...
+[2019/12/08 21:44:14][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:44:14][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:44:14][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:44:14][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:44:14][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:44:14][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:44:14][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:44:41][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:44:41][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:44:41][INFO][getThumbnails]  Building client...
+[2019/12/08 21:44:41][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:44:41][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:44:41][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:44:41][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:44:41][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:44:41][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:44:41][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:45:41][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:45:42][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:45:42][INFO][getThumbnails]  Building client...
+[2019/12/08 21:45:42][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:45:42][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:45:42][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:45:42][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:45:42][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:45:42][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:45:42][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:48:34][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:48:34][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:48:34][INFO][getThumbnails]  Building client...
+[2019/12/08 21:48:34][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:48:34][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:48:34][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:48:34][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:48:34][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:48:34][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:48:34][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:49:00][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:49:00][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:49:00][INFO][getThumbnails]  Building client...
+[2019/12/08 21:49:00][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:49:00][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:49:00][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:49:00][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:49:00][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:49:00][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:49:00][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:49:14][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:49:14][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:49:14][INFO][getThumbnails]  Building client...
+[2019/12/08 21:49:14][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:49:14][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:49:14][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:49:14][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:49:14][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:49:14][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:49:14][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:49:22][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:49:22][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:49:22][INFO][getThumbnails]  Building client...
+[2019/12/08 21:49:22][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:49:22][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:49:22][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:49:23][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:49:23][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:49:23][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:49:23][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:49:34][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:49:34][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:49:34][INFO][getThumbnails]  Building client...
+[2019/12/08 21:49:34][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:49:34][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:49:34][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:49:34][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:49:34][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:49:35][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:49:35][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:49:36][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:49:37][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:49:37][INFO][getThumbnails]  Building client...
+[2019/12/08 21:49:37][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:49:37][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:49:37][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:49:37][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:49:37][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:49:37][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:49:37][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:50:20][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:50:21][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:50:21][INFO][getThumbnails]  Building client...
+[2019/12/08 21:50:21][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:50:21][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:50:21][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:50:21][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:50:21][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:50:21][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:50:21][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:50:37][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:50:37][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:50:37][INFO][getThumbnails]  Building client...
+[2019/12/08 21:50:37][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:50:37][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:50:37][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:50:38][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:50:38][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:50:38][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:50:38][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:52:31][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:52:31][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:52:31][INFO][getThumbnails]  Building client...
+[2019/12/08 21:52:31][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:52:31][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:52:31][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:52:31][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:52:31][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:52:31][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:52:31][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:52:50][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:52:50][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:52:50][INFO][getThumbnails]  Building client...
+[2019/12/08 21:52:50][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:52:50][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:52:50][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:52:51][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:52:51][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:52:51][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:52:51][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:53:13][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:53:13][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:53:13][INFO][getThumbnails]  Building client...
+[2019/12/08 21:53:13][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:53:13][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:53:13][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:53:13][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:53:13][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:53:13][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:53:13][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:53:40][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:53:40][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:53:40][INFO][getThumbnails]  Building client...
+[2019/12/08 21:53:40][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:53:40][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:53:40][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:53:40][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:53:40][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:53:40][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:53:40][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:53:48][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:53:48][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:53:48][INFO][getThumbnails]  Building client...
+[2019/12/08 21:53:48][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:53:48][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:53:48][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:53:48][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:53:48][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:53:48][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:53:48][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:53:55][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:53:55][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:53:55][INFO][getThumbnails]  Building client...
+[2019/12/08 21:53:55][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:53:55][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:53:55][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:53:55][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:53:55][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:53:55][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:53:55][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:54:01][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:54:01][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:54:01][INFO][getThumbnails]  Building client...
+[2019/12/08 21:54:01][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:54:01][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:54:01][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:54:01][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:54:01][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:54:01][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:54:01][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:54:09][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:54:09][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:54:09][INFO][getThumbnails]  Building client...
+[2019/12/08 21:54:09][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:54:09][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:54:09][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:54:09][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:54:09][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:54:09][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:54:09][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:57:52][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:57:52][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:57:52][INFO][getThumbnails]  Building client...
+[2019/12/08 21:57:52][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:57:52][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:57:52][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:57:52][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:57:52][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:57:52][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:57:52][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:59:03][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:59:03][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:59:03][INFO][getThumbnails]  Building client...
+[2019/12/08 21:59:03][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:59:03][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:59:03][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:59:04][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:59:04][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:59:04][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:59:04][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 21:59:33][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 21:59:33][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 21:59:33][INFO][getThumbnails]  Building client...
+[2019/12/08 21:59:33][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 21:59:33][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 21:59:33][INFO][getThumbnails]  Sending request...
+[2019/12/08 21:59:33][INFO][getThumbnails]  Request sent.
+[2019/12/08 21:59:33][INFO][getThumbnails]  Received status 200
+[2019/12/08 21:59:33][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 21:59:33][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:04:05][INFO][insertCart]  Building client...
+[2019/12/08 22:04:05][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:04:05][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:04:05][INFO][insertCart]  Sending request...
+[2019/12/08 22:04:05][INFO][insertCart]  Request sent.
+[2019/12/08 22:04:05][INFO][insertCart]  Received status 200
+[2019/12/08 22:04:05][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:04:05][INFO][validItem]  Query succeeded.
+[2019/12/08 22:04:05][INFO][validItem]  Item available.
+[2019/12/08 22:04:05][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest1@uci.edu' AND movie_id = 'tt1345836';
+[2019/12/08 22:04:05][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:04:05][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:04:05][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest1@uci.edu', 'tt1345836', 10);
+[2019/12/08 22:04:06][INFO][insert]  Query succeeded.
+[2019/12/08 22:04:06][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:04:07][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:04:07][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:04:07][INFO][getThumbnails]  Building client...
+[2019/12/08 22:04:07][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:04:07][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:04:07][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:04:07][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:04:07][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:04:07][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:04:07][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:05:11][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:05:11][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:05:11][INFO][getThumbnails]  Building client...
+[2019/12/08 22:05:11][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:05:11][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:05:11][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:05:11][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:05:11][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:05:11][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:05:11][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:07:26][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:07:26][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:07:26][INFO][getThumbnails]  Building client...
+[2019/12/08 22:07:26][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:07:26][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:07:26][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:07:27][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:07:27][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:07:27][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:07:27][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:10:09][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:10:09][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:10:09][INFO][getThumbnails]  Building client...
+[2019/12/08 22:10:09][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:10:09][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:10:09][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:10:09][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:10:09][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:10:09][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:10:09][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:16:09][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest1@uci.edu';
+[2019/12/08 22:16:09][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:16:09][INFO][getThumbnails]  Building client...
+[2019/12/08 22:16:09][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:16:09][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:16:09][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:16:10][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:16:10][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:16:10][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:16:10][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:20:24][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:20:24][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:20:24][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 22:21:39][INFO][insertCart]  Building client...
+[2019/12/08 22:21:39][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:21:39][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:21:39][INFO][insertCart]  Sending request...
+[2019/12/08 22:21:39][INFO][insertCart]  Request sent.
+[2019/12/08 22:21:39][INFO][insertCart]  Received status 200
+[2019/12/08 22:21:39][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:21:39][INFO][validItem]  Query succeeded.
+[2019/12/08 22:21:39][INFO][validItem]  Item available.
+[2019/12/08 22:21:39][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest2@uci.edu' AND movie_id = 'tt1345836';
+[2019/12/08 22:21:39][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:21:39][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:21:39][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest2@uci.edu', 'tt1345836', 3);
+[2019/12/08 22:21:39][INFO][insert]  Query succeeded.
+[2019/12/08 22:21:39][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:22:36][INFO][insertCart]  Building client...
+[2019/12/08 22:22:36][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:22:36][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:22:36][INFO][insertCart]  Sending request...
+[2019/12/08 22:22:36][INFO][insertCart]  Request sent.
+[2019/12/08 22:22:36][INFO][insertCart]  Received status 200
+[2019/12/08 22:22:36][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:22:36][INFO][validItem]  Query succeeded.
+[2019/12/08 22:22:36][INFO][validItem]  Item available.
+[2019/12/08 22:22:36][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest2@uci.edu' AND movie_id = 'tt4154796';
+[2019/12/08 22:22:36][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:22:36][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:22:36][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest2@uci.edu', 'tt4154796', 10);
+[2019/12/08 22:22:36][INFO][insert]  Query succeeded.
+[2019/12/08 22:22:36][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:22:45][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:22:46][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:22:46][INFO][getThumbnails]  Building client...
+[2019/12/08 22:22:46][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:22:46][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:22:46][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:22:46][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:22:46][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:22:46][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:22:46][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:23:06][INFO][checkCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:23:06][INFO][checkCart]  Query succeeded.
+[2019/12/08 22:23:06][INFO][checkCart]  Cart available.
+[2019/12/08 22:23:06][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:23:06][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:23:06][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:23:06][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:23:06][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:23:06][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:23:06][INFO][getCartTotal]  Total Price in cart: 176.25
+[2019/12/08 22:23:08][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:23:08][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:23:08][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sale (sale_id, email, movie_id, quantity, sale_date) VALUES (default,'frontendtest2@uci.edu', 'tt1345836', 3, '2019-12-08 22:23:08.399');
+[2019/12/08 22:23:08][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:23:08][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction (sale_id, token) VALUES (20, '0HG71062K3144230K');
+[2019/12/08 22:23:09][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:23:09][INFO][buildResponse]  Response being built with Result: ORDER_PLACED_SUCCESSFUL
+[2019/12/08 22:23:37][INFO][checkToken]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sale.email FROM sale LEFT JOIN transaction ON sale.sale_id = transaction.sale_id WHERE token = '0HG71062K3144230K';
+[2019/12/08 22:23:37][INFO][checkToken]  Query succeeded.
+[2019/12/08 22:23:39][INFO][updateTrans]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE transaction SET capture_id = '4YN69317CL071125U' WHERE token = '0HG71062K3144230K';
+[2019/12/08 22:23:39][INFO][updateTrans]  Query succeeded.
+[2019/12/08 22:23:39][INFO][clearCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, movie_id, quantity FROM cart WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:23:39][INFO][clearCart]  Query succeeded.
+[2019/12/08 22:23:39][INFO][clearCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM cart WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:23:39][INFO][clearCart]  Query succeeded.
+[2019/12/08 22:23:40][INFO][buildResponse]  Response being built with Result: ORDER_COMPLETED_SUCCESSFUL
+[2019/12/08 22:24:08][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:24:08][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:24:08][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 22:24:32][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:24:32][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:24:32][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:24:40][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:24:41][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:24:41][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:25:04][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:25:04][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:25:08][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:25:34][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:25:35][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:25:35][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 22:25:52][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:25:53][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:25:58][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:27:50][INFO][insertCart]  Building client...
+[2019/12/08 22:27:50][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:27:50][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:27:50][INFO][insertCart]  Sending request...
+[2019/12/08 22:27:51][INFO][insertCart]  Request sent.
+[2019/12/08 22:27:51][INFO][insertCart]  Received status 200
+[2019/12/08 22:27:51][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:27:52][INFO][validItem]  Query succeeded.
+[2019/12/08 22:27:52][INFO][validItem]  Item available.
+[2019/12/08 22:27:52][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest2@uci.edu' AND movie_id = 'tt1345836';
+[2019/12/08 22:27:53][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:27:53][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:27:53][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest2@uci.edu', 'tt1345836', 3);
+[2019/12/08 22:27:53][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:27:55][INFO][insert]  Query succeeded.
+[2019/12/08 22:27:55][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:27:56][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:27:57][INFO][getThumbnails]  Building client...
+[2019/12/08 22:27:57][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:27:57][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:27:57][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:27:57][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:27:57][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:27:57][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:27:58][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:28:34][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:28:34][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:28:39][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:29:40][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:29:40][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:29:42][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:29:57][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest2@uci.edu';
+[2019/12/08 22:29:58][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:29:58][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:31:21][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:21][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:31:21][INFO][getThumbnails]  Building client...
+[2019/12/08 22:31:21][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:31:21][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:31:21][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:31:21][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:31:21][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:31:21][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:31:21][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:31:27][INFO][checkCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:27][INFO][checkCart]  Query succeeded.
+[2019/12/08 22:31:27][INFO][checkCart]  Cart available.
+[2019/12/08 22:31:27][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:28][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:31:28][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt0071853';
+[2019/12/08 22:31:28][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:31:28][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:31:28][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:31:28][INFO][getCartTotal]  Total Price in cart: 53.6
+[2019/12/08 22:31:30][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:30][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:31:30][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sale (sale_id, email, movie_id, quantity, sale_date) VALUES (default,'frontendtest@uci.edu', 'tt0071853', 2, '2019-12-08 22:31:30.776');
+[2019/12/08 22:31:31][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:31:31][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction (sale_id, token) VALUES (21, '51L71755SX5132939');
+[2019/12/08 22:31:31][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:31:31][INFO][buildResponse]  Response being built with Result: ORDER_PLACED_SUCCESSFUL
+[2019/12/08 22:31:49][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:31:49][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:31:49][INFO][getThumbnails]  Building client...
+[2019/12/08 22:31:49][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:31:49][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:31:49][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:31:49][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:31:49][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:31:49][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:31:49][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:34:16][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:34:16][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:34:16][INFO][getThumbnails]  Building client...
+[2019/12/08 22:34:16][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:34:16][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:34:16][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:34:17][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:34:17][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:34:17][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:34:17][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:34:24][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:34:24][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:34:24][INFO][getThumbnails]  Building client...
+[2019/12/08 22:34:24][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:34:24][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:34:24][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:34:24][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:34:24][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:34:24][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:34:24][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:34:26][INFO][checkCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:34:27][INFO][checkCart]  Query succeeded.
+[2019/12/08 22:34:27][INFO][checkCart]  Cart available.
+[2019/12/08 22:34:27][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:34:27][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:34:27][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt0071853';
+[2019/12/08 22:34:28][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:34:28][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:34:28][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:34:28][INFO][getCartTotal]  Total Price in cart: 53.6
+[2019/12/08 22:34:30][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:34:30][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:34:30][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sale (sale_id, email, movie_id, quantity, sale_date) VALUES (default,'frontendtest@uci.edu', 'tt0071853', 2, '2019-12-08 22:34:30.465');
+[2019/12/08 22:34:30][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:34:30][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction (sale_id, token) VALUES (22, '654384800B4071935');
+[2019/12/08 22:34:30][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:34:30][INFO][buildResponse]  Response being built with Result: ORDER_PLACED_SUCCESSFUL
+[2019/12/08 22:34:59][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:35:00][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:35:00][INFO][getThumbnails]  Building client...
+[2019/12/08 22:35:00][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:35:00][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:35:00][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:35:00][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:35:00][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:35:00][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:35:00][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:35:14][INFO][checkCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:35:15][INFO][checkCart]  Query succeeded.
+[2019/12/08 22:35:15][INFO][checkCart]  Cart available.
+[2019/12/08 22:35:15][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:35:15][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:35:15][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt0071853';
+[2019/12/08 22:35:15][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:35:15][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:35:15][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:35:15][INFO][getCartTotal]  Total Price in cart: 53.6
+[2019/12/08 22:35:17][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest@uci.edu';
+[2019/12/08 22:35:17][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:35:17][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sale (sale_id, email, movie_id, quantity, sale_date) VALUES (default,'frontendtest@uci.edu', 'tt0071853', 2, '2019-12-08 22:35:17.484');
+[2019/12/08 22:35:17][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:35:17][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction (sale_id, token) VALUES (23, '2UL46124NK4698836');
+[2019/12/08 22:35:17][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:35:17][INFO][buildResponse]  Response being built with Result: ORDER_PLACED_SUCCESSFUL
+[2019/12/08 22:36:48][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:36:48][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:36:48][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 22:37:59][INFO][insertCart]  Building client...
+[2019/12/08 22:37:59][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:37:59][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:37:59][INFO][insertCart]  Sending request...
+[2019/12/08 22:37:59][INFO][insertCart]  Request sent.
+[2019/12/08 22:37:59][INFO][insertCart]  Received status 200
+[2019/12/08 22:37:59][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:37:59][INFO][validItem]  Query succeeded.
+[2019/12/08 22:37:59][INFO][validItem]  Item available.
+[2019/12/08 22:37:59][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest3@uci.edu' AND movie_id = 'tt1345836';
+[2019/12/08 22:37:59][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:37:59][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:37:59][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest3@uci.edu', 'tt1345836', 3);
+[2019/12/08 22:38:00][INFO][insert]  Query succeeded.
+[2019/12/08 22:38:00][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:38:14][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:38:14][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:38:14][INFO][getThumbnails]  Building client...
+[2019/12/08 22:38:14][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:38:14][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:38:14][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:38:14][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:38:14][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:38:14][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:38:14][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:38:46][INFO][insertCart]  Building client...
+[2019/12/08 22:38:46][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:38:46][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:38:46][INFO][insertCart]  Sending request...
+[2019/12/08 22:38:46][INFO][insertCart]  Request sent.
+[2019/12/08 22:38:46][INFO][insertCart]  Received status 200
+[2019/12/08 22:38:46][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:38:46][INFO][validItem]  Query succeeded.
+[2019/12/08 22:38:46][INFO][validItem]  Item available.
+[2019/12/08 22:38:46][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest3@uci.edu' AND movie_id = 'tt4154796';
+[2019/12/08 22:38:46][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:38:46][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:38:46][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest3@uci.edu', 'tt4154796', 10);
+[2019/12/08 22:38:47][INFO][insert]  Query succeeded.
+[2019/12/08 22:38:47][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:38:50][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:38:50][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:38:50][INFO][getThumbnails]  Building client...
+[2019/12/08 22:38:50][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:38:50][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:38:50][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:38:50][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:38:50][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:38:50][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:38:50][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:39:05][INFO][checkCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:39:05][INFO][checkCart]  Query succeeded.
+[2019/12/08 22:39:05][INFO][checkCart]  Cart available.
+[2019/12/08 22:39:05][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:39:05][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:39:05][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:39:05][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:39:05][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:39:06][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:39:06][INFO][getCartTotal]  Total Price in cart: 176.25
+[2019/12/08 22:39:07][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:39:07][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:39:07][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sale (sale_id, email, movie_id, quantity, sale_date) VALUES (default,'frontendtest3@uci.edu', 'tt1345836', 3, '2019-12-08 22:39:07.562');
+[2019/12/08 22:39:07][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:39:07][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction (sale_id, token) VALUES (24, '6YE46841MB8976618');
+[2019/12/08 22:39:07][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:39:07][INFO][buildResponse]  Response being built with Result: ORDER_PLACED_SUCCESSFUL
+[2019/12/08 22:39:29][INFO][checkToken]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sale.email FROM sale LEFT JOIN transaction ON sale.sale_id = transaction.sale_id WHERE token = '6YE46841MB8976618';
+[2019/12/08 22:39:29][INFO][checkToken]  Query succeeded.
+[2019/12/08 22:39:31][INFO][updateTrans]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE transaction SET capture_id = '9EM35078NP606945X' WHERE token = '6YE46841MB8976618';
+[2019/12/08 22:39:31][INFO][updateTrans]  Query succeeded.
+[2019/12/08 22:39:31][INFO][clearCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, movie_id, quantity FROM cart WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:39:32][INFO][clearCart]  Query succeeded.
+[2019/12/08 22:39:32][INFO][clearCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM cart WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:39:32][INFO][clearCart]  Query succeeded.
+[2019/12/08 22:39:32][INFO][buildResponse]  Response being built with Result: ORDER_COMPLETED_SUCCESSFUL
+[2019/12/08 22:39:43][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:39:43][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:39:43][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 22:39:47][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest3@uci.edu';
+[2019/12/08 22:39:47][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:39:48][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[2019/12/08 22:42:00][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:42:00][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:42:00][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 22:42:52][INFO][insertCart]  Building client...
+[2019/12/08 22:42:52][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:42:52][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:42:52][INFO][insertCart]  Sending request...
+[2019/12/08 22:42:52][INFO][insertCart]  Request sent.
+[2019/12/08 22:42:52][INFO][insertCart]  Received status 200
+[2019/12/08 22:42:52][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:42:52][INFO][validItem]  Query succeeded.
+[2019/12/08 22:42:52][INFO][validItem]  Item available.
+[2019/12/08 22:42:52][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest4@uci.edu' AND movie_id = 'tt1345836';
+[2019/12/08 22:42:52][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:42:52][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:42:52][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest4@uci.edu', 'tt1345836', 3);
+[2019/12/08 22:42:56][INFO][insert]  Query succeeded.
+[2019/12/08 22:42:56][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:42:56][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:42:56][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:42:56][INFO][getThumbnails]  Building client...
+[2019/12/08 22:42:56][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:42:56][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:42:56][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:42:56][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:42:56][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:42:56][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:42:56][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:43:26][INFO][insertCart]  Building client...
+[2019/12/08 22:43:26][INFO][insertCart]  Building WebTarget...
+[2019/12/08 22:43:26][INFO][insertCart]  Starting invocation builder...
+[2019/12/08 22:43:26][INFO][insertCart]  Sending request...
+[2019/12/08 22:43:26][INFO][insertCart]  Request sent.
+[2019/12/08 22:43:26][INFO][insertCart]  Received status 200
+[2019/12/08 22:43:26][INFO][validItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:43:26][INFO][validItem]  Query succeeded.
+[2019/12/08 22:43:26][INFO][validItem]  Item available.
+[2019/12/08 22:43:26][INFO][checkItem]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest4@uci.edu' AND movie_id = 'tt4154796';
+[2019/12/08 22:43:26][INFO][checkItem]  Query succeeded.
+[2019/12/08 22:43:26][INFO][checkItem]  Item not in cart.
+[2019/12/08 22:43:26][INFO][insert]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cart (email, movie_id, quantity) VALUES ('frontendtest4@uci.edu', 'tt4154796', 10);
+[2019/12/08 22:43:27][INFO][insert]  Query succeeded.
+[2019/12/08 22:43:27][INFO][buildResponse]  Response being built with Result: INSERT_IN_CART_SUCCESSFUL
+[2019/12/08 22:43:31][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:43:31][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:43:31][INFO][getThumbnails]  Building client...
+[2019/12/08 22:43:31][INFO][getThumbnails]  Building WebTarget...
+[2019/12/08 22:43:31][INFO][getThumbnails]  Starting invocation builder...
+[2019/12/08 22:43:31][INFO][getThumbnails]  Sending request...
+[2019/12/08 22:43:32][INFO][getThumbnails]  Request sent.
+[2019/12/08 22:43:32][INFO][getThumbnails]  Received status 200
+[2019/12/08 22:43:32][INFO][getThumbnails]  Successfully mapped response.
+[2019/12/08 22:43:32][INFO][buildResponse]  Response being built with Result: RETRIEVED_SUCCESSFUL
+[2019/12/08 22:43:43][INFO][checkCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:43:43][INFO][checkCart]  Query succeeded.
+[2019/12/08 22:43:43][INFO][checkCart]  Cart available.
+[2019/12/08 22:43:43][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:43:44][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:43:44][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt1345836';
+[2019/12/08 22:43:44][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:43:44][INFO][getCartTotal]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT unit_price, discount FROM movie_price WHERE movie_id = 'tt4154796';
+[2019/12/08 22:43:44][INFO][getCartTotal]  Query succeeded.
+[2019/12/08 22:43:44][INFO][getCartTotal]  Total Price in cart: 176.25
+[2019/12/08 22:43:45][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, quantity FROM cart WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:43:45][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:43:45][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sale (sale_id, email, movie_id, quantity, sale_date) VALUES (default,'frontendtest4@uci.edu', 'tt1345836', 3, '2019-12-08 22:43:45.491');
+[2019/12/08 22:43:45][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:43:45][INFO][insertSaleAndTransaction]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction (sale_id, token) VALUES (25, '98B01210VP163712U');
+[2019/12/08 22:43:45][INFO][insertSaleAndTransaction]  Query succeeded.
+[2019/12/08 22:43:45][INFO][buildResponse]  Response being built with Result: ORDER_PLACED_SUCCESSFUL
+[2019/12/08 22:44:07][INFO][checkToken]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sale.email FROM sale LEFT JOIN transaction ON sale.sale_id = transaction.sale_id WHERE token = '98B01210VP163712U';
+[2019/12/08 22:44:07][INFO][checkToken]  Query succeeded.
+[2019/12/08 22:44:09][INFO][updateTrans]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE transaction SET capture_id = '36J58698RW621881V' WHERE token = '98B01210VP163712U';
+[2019/12/08 22:44:09][INFO][updateTrans]  Query succeeded.
+[2019/12/08 22:44:09][INFO][clearCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, movie_id, quantity FROM cart WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:44:09][INFO][clearCart]  Query succeeded.
+[2019/12/08 22:44:09][INFO][clearCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM cart WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:44:09][INFO][clearCart]  Query succeeded.
+[2019/12/08 22:44:09][INFO][buildResponse]  Response being built with Result: ORDER_COMPLETED_SUCCESSFUL
+[2019/12/08 22:44:18][INFO][retrieveCart]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cart JOIN movie_price on cart.movie_id = movie_price.movie_id WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:44:18][INFO][retrieveCart]  Query succeeded.
+[2019/12/08 22:44:18][INFO][buildResponse]  Response being built with Result: NONEXISTENT_ITEM
+[2019/12/08 22:44:24][INFO][getOrderID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT token FROM transaction LEFT JOIN sale ON transaction.sale_id = sale.sale_id WHERE email = 'frontendtest4@uci.edu';
+[2019/12/08 22:44:24][INFO][getOrderID]  Query succeeded.
+[2019/12/08 22:44:24][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL

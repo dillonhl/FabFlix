@@ -1,0 +1,22 @@
+{
+  "baseUrl": "http://localhost:12345/api/g",
+  "pollLimit": 10,
+  "gatewayEPs": {
+    "reportEP": "/report"
+  },
+  "idmEPs": {
+    "loginEP": "/idm/login",
+    "registerEP": "/idm/register"
+  },
+  "movieEPs": {
+    "browseEP": "/movies/browse",
+    "movieidEP": "/movies/get/",
+    "movieSearchEP": "/movies/search"
+  },
+  "cartEPs": {
+    "retrieveEP": "/billing/cart/retrieve",
+    "insertEP": "/billing/cart/insert",
+    "placeEP": "/billing/order/place",
+    "historyEP": "/billing/order/retrieve"
+  }
+}
