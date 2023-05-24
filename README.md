@@ -5,6 +5,8 @@
  
  A logged in user can browse movies with either movie details (title, director, genre, etc.) or keywords that describe a movie. The user can also choose to put movies in their cart and checkout using their PayPal. 
  
- 
+ A video demonstration of how the eCommerce application executed.
+
+https://www.youtube.com/watch?v=VfHWrOvbTBM&ab_channel=DillonHoangDaiLe
  
  
